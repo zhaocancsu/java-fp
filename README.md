@@ -42,7 +42,8 @@ public class Cafe {
 
 将支付的创建与实际处理进行分离
 ```
-    Coffee cup = new Coffee();
+    public Pair<Coffee, Charge> buyCoffee(CreditCard cc) {
+        Coffee cup = new Coffee();
         return new ImmutablePair(cup, new Charge(cc, cup.price()));
     }
     
