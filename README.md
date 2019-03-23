@@ -151,6 +151,10 @@ public class TestMain {
        9: invokespecial #4                  // Method java/lang/Thread."<init>":(Ljava/lang/Runnable;)V
       12: invokevirtual #5                  // Method java/lang/Thread.start:()V
       15: return
+
+  private static void lambda$main$0();
+    Code:
+       0: return
 }
 ```
 
