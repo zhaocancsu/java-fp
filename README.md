@@ -170,7 +170,8 @@ public class TestMain {
 1.不是数据结构，或者说它是一种数据源的视图更合适<br>
 2.Stream是用函数式编程方式在集合类上进行复杂操作的工具
 
-
+*Stream.forEach vs for(int i = 0; i < n; i++)*<br>
+![循环比较](https://github.com/zhaocancsu/java-fp/blob/master/loop-diff.png)
 
 **关于Stream的操作**
 
