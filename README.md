@@ -13,7 +13,7 @@ java函数式编程简介
   * 在屏幕上绘画
 
 ## 思想理解
-```
+```Java
 public class Cafe {
 
     public Coffee buyCoffee(CreditCard  cc){
@@ -27,7 +27,7 @@ public class Cafe {
 
 模块化与可测试性
 
-```
+```Java
 //单独抽取一个付费模块
 public class Cafe {
     public Coffee buyCoffee(CreditCard  cc, Payments p){
@@ -41,7 +41,7 @@ public class Cafe {
 ![对比](https://github.com/zhaocancsu/java-fp/blob/master/side-effect-fp.png)
 
 将支付的创建与实际处理进行分离
-```
+```Java
     public Pair<Coffee, Charge> buyCoffee(CreditCard cc) {
         Coffee cup = new Coffee();
         return new ImmutablePair(cup, new Charge(cc, cup.price()));
@@ -60,4 +60,59 @@ public class Cafe {
 * ***从实现角度来考虑，函数式的方式更容易进行推理转换***
 
 ## java中的实现和使用
+* ***匿名内部类和lambda***
+  
+  以启动一个线程为例以前这样写
+ ```Java
+ new Thread(new Runnable(){
+    @Override
+    public void run(){
+        //do something
+    }
+}).start();
+ ```
+ 现在可以改成这样
+ ```Java
+ new Thread(
+        () -> {
+            //do something
+        }
+).start();
+ ```
+ **怎么做到的？？**
+ 
+ 1.基于编译器的类型推断<br>
+ 2.推断依据:函数接口(只有一个抽象方法的interface)<br>
+ 3.lambda表达式的类型为它的函数接口类型
+ 
+ 例如Runnable接口现在是这样定义的
+ ```Java
+ @FunctionalInterface
+public interface Runnable {
+    /**
+     * When an object implementing interface <code>Runnable</code> is used
+     * to create a thread, starting the thread causes the object's
+     * <code>run</code> method to be called in that separately executing
+     * thread.
+     * <p>
+     * The general contract of the method <code>run</code> is that it may
+     * take any action whatsoever.
+     *
+     * @see     java.lang.Thread#run()
+     */
+    public abstract void run();
+}
+ ```
+ FunctionalInterface是可选的,显示加上后编译器会检查该接口是否符合函数接口规范(但可以定义默认方法,静态方法和Object类里的public方法)
+ 
+ **匿名内部类==lambda表达式？？**
+ 功能上可能是相似的<br>
+ 实现原理上会有些差异
+ 
+ 
+  
+* ***Streaming***
 
+* ***闭包***
+
+* ***柯里化***
