@@ -109,7 +109,7 @@ public interface Runnable {
  功能上可能是相似的<br>
  实现原理上会有些差异
  
-![匿名内部类编译](https://github.com/zhaocancsu/java-fp/blob/master/AnonymousInnerClassJavac.png)
+![匿名内部类编译](https://github.com/zhaocancsu/java-fp/blob/master/diff.png)
   
 * ***Streaming***
 
