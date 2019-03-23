@@ -164,7 +164,22 @@ public class TestMain {
 |  invokevirtual   | 调用实例方法    |
 |  invokedynamic   | 先在运行时动态解析出调用点限定符所引用的方法，然后再执行该方法，在此之前的4条调用指令，分派逻辑是固化在java虚拟机内部的，而invokedynamic指令的分派逻辑是由用户所设定的引导方法决定的    |
 
-* ***Streaming***
+* ***Stream***
+**它是什么？？**
+
+1.不是数据结构，或者说它是一种数据源的视图更合适<br>
+2.Stream是用函数式编程方式在集合类上进行复杂操作的工具
+
+
+
+**关于Stream的操作**
+
+操作方法分为两类：transform(中间操作)和action(终结操作)
+
+| 操作类型        | 方法           |
+| ------------- |:-------------:|
+| 中间操作      |concat() distinct() filter() flatMap() limit() map() peek() skip() sorted() parallel() sequential() unordered() |
+|  终结操作  | allMatch() anyMatch() collect() count() findAny() findFirst() forEach() forEachOrdered() max() min() noneMatch() reduce() toArray()      |
 
 * ***闭包***
 
