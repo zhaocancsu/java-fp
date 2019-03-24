@@ -202,6 +202,17 @@ ArrayList中forEach实现如下<br>
 
 假设对于一个集合做如下操作(先filter再count)
 
+![stream简单示例](https://github.com/zhaocancsu/java-fp/blob/master/stream-example.png)
+
+实现方式
+1. 不会使用2次循环迭代的方式实现<br>
+2. jdk实现方式
+   
+   
+   * 中间操作会产生一个stage
+   * 每个stage中会存储回调函数的信息(即中间操作的转换方式)
+   * 终止操作会触发之前的各个中间操作构建成一个双向链表，然后计算过程从第一个stage开始，通过一次循环迭代最终计算完成
+
 * ***闭包***
 
 * ***柯里化***
