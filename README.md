@@ -200,6 +200,8 @@ ArrayList中forEach实现如下<br>
 | 中间操作      |concat() distinct() filter() flatMap() limit() map() peek() skip() sorted() parallel() sequential() unordered() |
 |  终结操作  | allMatch() anyMatch() collect() count() findAny() findFirst() forEach() forEachOrdered() max() min() noneMatch() reduce() toArray()      |
 
+假设对于一个集合做如下操作(先filter再count)
+
 * ***闭包***
 
 * ***柯里化***
