@@ -173,6 +173,24 @@ public class TestMain {
 *Stream.forEach vs for(int i = 0; i < n; i++)*<br>
 ![循环比较](https://github.com/zhaocancsu/java-fp/blob/master/loop-diff.png)
 
+ArrayList中forEach实现如下<br>
+```Java
+@Override
+    public void forEach(Consumer<? super E> action) {
+        Objects.requireNonNull(action);
+        final int expectedModCount = modCount;
+        @SuppressWarnings("unchecked")
+        final E[] elementData = (E[]) this.elementData;
+        final int size = this.size;
+        for (int i=0; modCount == expectedModCount && i < size; i++) {
+            action.accept(elementData[i]);
+        }
+        if (modCount != expectedModCount) {
+            throw new ConcurrentModificationException();
+        }
+    }
+```
+
 **关于Stream的操作**
 
 操作方法分为两类：transform(中间操作)和action(终结操作)
