@@ -210,10 +210,8 @@ ArrayList中forEach实现如下<br>
    
    ![stream原理](https://github.com/zhaocancsu/java-fp/blob/master/stream-stage.png)
    
-   * 中间操作会产生一个stage
+   * 首先中间操作是lazy的
+   * 中间操作会产生一个stage,stage之间通过双向链表组织
    * 每个stage中会存储回调函数的信息(即中间操作的转换方式)
-   * 终止操作会触发之前的各个中间操作构建成一个双向链表，然后计算过程从第一个stage开始，通过一次循环迭代最终计算完成
+   * 终止操作会根据双向链表找到第一个stage，然后计算过程从第一个stage开始，通过一次循环迭代最终计算完成
 
-* ***闭包***
-
-* ***柯里化***
