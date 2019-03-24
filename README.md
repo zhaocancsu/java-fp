@@ -208,7 +208,7 @@ ArrayList中forEach实现如下<br>
 1. 不会使用2次循环迭代的方式实现<br>
 2. jdk实现方式
    
-   ![stream简单示例](https://github.com/zhaocancsu/java-fp/blob/master/stream-.png)
+   ![stream原理](https://github.com/zhaocancsu/java-fp/blob/master/stream-stage.png)
    
    * 中间操作会产生一个stage
    * 每个stage中会存储回调函数的信息(即中间操作的转换方式)
