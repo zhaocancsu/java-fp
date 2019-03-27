@@ -162,7 +162,7 @@ public class TestMain {
 | invokestatic      |调用静态方法 |
 |  invokespecial  | 调用私有方法、实例构造器方法、父类方法      |
 |  invokevirtual   | 调用实例方法    |
-|  invokedynamic   | 先在运行时动态解析出调用点限定符所引用的方法，然后再执行该方法，在此之前的4条调用指令，分派逻辑是固化在java虚拟机内部的，而invokedynamic指令的分派逻辑是由用户所设定的引导方法决定的    |
+|  invokedynamic   | 先在运行时动态解析出调用点限定符所引用的方法，然后再执行该方法，在此之前的4条调用指令，分派逻辑是固化在java虚拟机内部的，而invokedynamic指令的分派逻辑是由用户所设定的引导方法决定的 [invokedynamic字节码](http://blog.jobbole.com/99981/)   |
 
 * ***Stream***
 **它是什么？？**
