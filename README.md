@@ -221,6 +221,6 @@ ArrayList中forEach实现如下<br>
   
    ![fork-join](https://github.com/zhaocancsu/java-fp/blob/master/fork-join.png)
    
-   注意事项：
+   注意事项：<br>
    (1)处理数据量，并拆分的小task之间互不依赖<br>
    (2)输出结果要求有序<br>
