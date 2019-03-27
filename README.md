@@ -206,7 +206,7 @@ ArrayList中forEach实现如下<br>
 
 实现方式
 1. 不会使用2次循环迭代的方式实现<br>
-2. jdk实现方式
+2. 需要解决的问题：操作怎么记录?多个操作之间的关系?最终操作的执行?
    
    ![stream原理](https://github.com/zhaocancsu/java-fp/blob/master/stream-stage.png)
    
